@@ -1,5 +1,5 @@
 [package]
-name = "pardiso"
+name = "onemkl_sparse_solver_sys"
 version = "0.1.0"
 edition = "2021"
 

@@ -1,6 +1,6 @@
 [workspace]
 
 members = [
-  "pardiso",
+  "onemkl_sparse_solver_sys",
   "sparse-solver",
 ]

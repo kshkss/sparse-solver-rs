@@ -5,8 +5,15 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[features]
+default = []
+mkl-static-lp64-iomp   = ["onemkl_sparse_solver_sys/mkl-static-lp64-iomp"]
+mkl-static-lp64-seq    = ["onemkl_sparse_solver_sys/mkl-static-lp64-seq"]
+mkl-dynamic-lp64-iomp  = ["onemkl_sparse_solver_sys/mkl-dynamic-lp64-iomp"]
+mkl-dynamic-lp64-seq   = ["onemkl_sparse_solver_sys/mkl-dynamic-lp64-seq"]
+
 [dependencies]
-onemkl_sparse_solver_sys = { version = "0.1.0", path = "../onemkl_sparse_solver_sys" }
 ndarray = "0.15.6"
+onemkl_sparse_solver_sys = { version = "0.1.0", path = "../onemkl_sparse_solver_sys", default-features = false }
 sprs = "0.11.1"
 thiserror = "1.0.49"

@@ -5,5 +5,16 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[features]
+default = []
+mkl-static-lp64-iomp   = ["intel-mkl-src/mkl-static-lp64-iomp"]
+mkl-static-lp64-seq    = ["intel-mkl-src/mkl-static-lp64-seq"]
+#mkl-static-ilp64-iomp  = ["intel-mkl-src/mkl-static-ilp64-iomp"]
+#mkl-static-ilp64-seq   = ["intel-mkl-src/mkl-static-ilp64-seq"]
+mkl-dynamic-lp64-iomp  = ["intel-mkl-src/mkl-dynamic-lp64-iomp"]
+mkl-dynamic-lp64-seq   = ["intel-mkl-src/mkl-dynamic-lp64-seq"]
+#mkl-dynamic-ilp64-iomp = ["intel-mkl-src/mkl-dynamic-ilp64-iomp"]
+#mkl-dynamic-ilp64-seq  = ["intel-mkl-src/mkl-dynamic-ilp64-seq"]
+
 [dependencies]
-intel-mkl-src = "0.8.1"
+intel-mkl-src = {version = "0.8.1", default-features = false}

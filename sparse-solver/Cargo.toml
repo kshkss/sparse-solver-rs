@@ -7,3 +7,6 @@ edition = "2021"
 
 [dependencies]
 onemkl_sparse_solver_sys = { version = "0.1.0", path = "../onemkl_sparse_solver_sys" }
+ndarray = "0.15.6"
+sprs = "0.11.1"
+thiserror = "1.0.49"
